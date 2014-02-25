@@ -1,7 +1,5 @@
 {-# LANGUAGE OverloadedStrings #-}
-import           Data.Monoid ((<>), mappend, mconcat)
 import           Hakyll
-import           Text.Pandoc.Options (readerSmart)
 
 main :: IO ()
 main = hakyll $ do
@@ -18,7 +16,6 @@ main = hakyll $ do
     match "*.html" $ do
         route $ setExtension "html"
         compile $ do
-            let indexCtx = defaultContext
             getResourceBody
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
