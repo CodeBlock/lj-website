@@ -2,7 +2,7 @@
 import Hakyll
 
 main :: IO ()
-main = hakyll $ do
+main = hakyll $ 
   match "images/*" $ do
     route idRoute
     compile copyFileCompiler
@@ -15,7 +15,7 @@ main = hakyll $ do
 
     match "*.html" $ do
       route $ setExtension "html"
-      compile $ do
+      compile $ 
         getResourceBody
           >>= loadAndApplyTemplate "templates/default.html" defaultContext
           >>= relativizeUrls
