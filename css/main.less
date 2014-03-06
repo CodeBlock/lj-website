@@ -1,21 +1,27 @@
+@import url('http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Open+Sans:400,700,300');
+
 html {
     position: relative;
     min-height: 100%;
 }
 
 body {
-    font-family: 'Lato', 'Proxima Nova', sans-serif !important;
+    font-family: 'Open Sans', sans-serif !important;
     background-color: #f7f7f7;
     margin-bottom: 41px;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Lato', 'Proxima Nova', sans-serif !important;
-    margin: 0;
-    padding: 0;
+    font-family: 'Open Sans', sans-serif !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
+/* So we nuke the margin on index, but add it back elsewhere. */
+.navbar-index { margin-bottom: 0px !important; }
+
 .center { text-align: center; }
+.roboto-slab { font-family: 'Roboto Slab', serif !important; }
 
 .hab-navbar {
     .navbar-brand, .navbar-nav li a {
@@ -27,7 +33,7 @@ h1, h2, h3, h4, h5 {
     li { border-top: 5px solid transparent; }
 
     .selected {
-        border-top: 5px solid #3970A6;
+        border-top: 5px solid #00b0f0;
     }
 
     .navbar-brand {
@@ -41,7 +47,7 @@ h1, h2, h3, h4, h5 {
     a {
         color: #555555;
         &:hover {
-            color: #3970A6;
+            color: #00b0f0;
             background-color: transparent !important;
         }
 
@@ -50,10 +56,11 @@ h1, h2, h3, h4, h5 {
 }
 
 .shadow { box-shadow: 0px 2px 7px #888; }
+.hard-shadow { box-shadow: 0px 3px 3px #555; }
 .shadow-huge { box-shadow: 0px 2px 17px #888; }
 
 .blue {
-    background-color: #C3E1FF;
+    background-color: #FFA94B;
     padding: 20px 0;
 }
 
@@ -77,9 +84,31 @@ h3.huge {
 
 p { color: #666666; }
 
-
 #index {
-  .map {
+   #chicago {
+    background: transparent url('/images/chicago-blackbg.jpg') no-repeat !important;
+    background-position: bottom !important;
+    padding-top: 20px;
+    height: 396px;
+    color: #f8f8f8;
+    margin-bottom: 10px;
+
+    h1 {
+      font-weight: bold;
+      text-shadow: 2px 2px 2px #333;
+    }
+    h2 {
+      font-weight: 300;
+      text-shadow: 2px 2px 2px #333;
+    }
+    h3 { font-style: italic; }
+  }
+
+  h1.tagline {
+    margin: 20px 0 !important;
+  }
+
+ .map {
     padding: 0 !important;
     border-radius: 5px;
     frameborder: 0;
