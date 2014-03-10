@@ -24,7 +24,7 @@ git checkout gh-pages
 shopt -s extglob
 rm -rfv !(CNAME)
 mv ../_site/* .
-git add .
+git add -A .
 git commit -m "Deploy"
 git push origin gh-pages
 popd
