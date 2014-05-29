@@ -22,10 +22,6 @@ main = do
 
     match "templates/*" $ compile templateCompiler
 
-    match "content.html" $ do
-      route idRoute
-      compile copyFileCompiler
-
     match "*.html" $ do
       let ctx = mconcat [ constField "ts" ts'
                         , defaultContext
