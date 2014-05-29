@@ -10,7 +10,7 @@
     <meta http-equiv="pragma" content="no-cache">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
-    <link rel="stylesheet/less" href="./css/main.1401298015.315995s.less">
+    <link rel="stylesheet/less" href="./css/main.1401354666.744215s.less">
     <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -52,13 +52,22 @@
       </nav>
     </header>
 
-    <style>
-</style>
-
-<div class="container">
+    <div class="container">
   <div class="row">
     <div class="col-lg-12">
-      <iframe id="confuiEmbeddedViewProgramme" name="confuiEmbeddedViewProgramme" src="https://a.confui.com/public/conferences/5371dd14904753e2e6000f1a/locations/5371dd15904753e2e6000f1c/schedule?framehost=http%3A%2F%2Fwww.lambdajam.com%2F" frameborder="0" height="2500px" width="100%" style="width:100% height: 2500px; border:none" scrolling="no"></iframe>
+      <script type="text/javascript" src="https://a.confui.com/nojquery.ba-postmessage.min.js"></script>
+      <iframe id="confuiEmbeddedViewProgramme" name="confuiEmbeddedViewProgramme" src="https://a.confui.com/public/conferences/5371dd14904753e2e6000f1a/locations/5371dd15904753e2e6000f1c/schedule?framehost=http%3A%2F%2Fwww.lambdajam.com%2F" style="width:100%;border:none" scrolling="no"></iframe>
+      <script type="text/javascript">
+      //<![CDATA[
+      var postman = new NoJQueryPostMessageMixin('postMessage', 'receiveMessage');
+      postman.receiveMessage(function(e) {
+          var iframe = document.getElementById('confuiEmbeddedViewProgramme');
+          iframe.height = e.data + 'px';
+          window.scroll(0,0);
+        }
+      );
+      //]]>
+      </script>
     </div>
   </div>
 </div>

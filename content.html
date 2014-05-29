@@ -1,22 +1,98 @@
-<script type="text/javascript" src="https://a.confui.com/nojquery.ba-postmessage.min.js"></script>
-<iframe id="confuiSharedItem" name="confuiSharedItem"  style="width:100%;border:none" scrolling="no"></iframe>
-<script type="text/javascript">
-//<![CDATA[
-function getParameterByName(name) {
-    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
-        results = regex.exec(location.search);
-    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
-}
-var postman = new NoJQueryPostMessageMixin('postMessage', 'receiveMessage');
-postman.receiveMessage(function(e) {
-    var iframe = document.getElementById('confuiSharedItem');
-    iframe.height = e.data + 'px';
-    window.scroll(0,0);
-  }
-);
-var url = getParameterByName('url');
-var iframe = document.getElementById('confuiSharedItem');
-iframe.src = url;
-//]]>
-</script>
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>LambaJam Chicago - Conference Information</title>
+    <meta name="description" content="Conference Information">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="cache-control" content="no-cache, no-store">
+    <meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet/less" href="./css/main.1401354666.744215s.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-48517525-1', 'lambdajam.com');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default hab-navbar navbar-content" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a id="index_menu" class="navbar-brand" href="./">
+              <img src="./images/LambdaJam2014-Small.png" alt="LambdaJam Logo" />
+            </a>
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li id="program_menu"><a href="./program.html"><i class="fa fa-calendar"></i> Program</a></li>
+              <li id="speakers_menu"><a href="./speakers.html"><i class="fa fa-user"></i> Speakers</a></li>
+              <li id="cfp_menu"><a href="./cfp.html"><i class="fa fa-bullhorn"></i> CFP</a></li>
+              <li id="register_menu"><a href="./register.html"><i class="fa fa-ticket"></i> Register</a></li>
+              <li id="policies_menu"><a href="./policies.html"><i class="fa fa-book"></i> Policies</a></li>
+              <li id="sponsorship_menu"><a href="./sponsorship.html"><i class="fa fa-credit-card"></i> Sponsorship</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <script type="text/javascript" src="https://a.confui.com/nojquery.ba-postmessage.min.js"></script>
+      <iframe id="confuiSharedItem" name="confuiSharedItem" style="width:100%;border:none" scrolling="no"></iframe>
+      <script type="text/javascript">
+      //<![CDATA[
+      function getParameterByName(name) {
+          name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+          var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+              results = regex.exec(location.search);
+          return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+      }
+      var postman = new NoJQueryPostMessageMixin('postMessage', 'receiveMessage');
+      postman.receiveMessage(function(e) {
+          var iframe = document.getElementById('confuiSharedItem');
+          iframe.height = e.data + 'px';
+          window.scroll(0,0);
+        }
+      );
+      var url = getParameterByName('url');
+      var iframe = document.getElementById('confuiSharedItem');
+      iframe.src = url;
+      //]]>
+      </script>
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+      <div class="container">
+        <span class="pull-left">
+          © 2014 Strange Loop, LLC.
+        </span>
+        <span class="pull-right">
+          All rights reserved.
+        </span>
+      </div>
+    </footer>
+
+    
+  </body>
+</html>
