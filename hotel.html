@@ -1,8 +1,8 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>LambaJam Chicago - Speakers</title>
-    <meta name="description" content="Learn all about the speakers of Lambda Jam Chicago.">
+    <title>LambaJam Chicago - Hotel Information</title>
+    <meta name="description" content="This page contains information about the hotel for LambdaJam Chicago, including how to get there and where to park.">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="expires" content="0">
@@ -25,7 +25,7 @@
   </head>
   <body>
     <header>
-      <nav class="navbar navbar-default hab-navbar navbar-speakers" role="navigation">
+      <nav class="navbar navbar-default hab-navbar navbar-hotel" role="navigation">
         <div class="container">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-collapse">
@@ -53,27 +53,62 @@
       </nav>
     </header>
 
-    <style>
-</style>
-
-<div class="container">
-  <div class="row">
-    <div class="col-lg-12">
-      <script type="text/javascript" src="https://a.confui.com/nojquery.ba-postmessage.min.js"></script>
-      <iframe id="confuiEmbeddedViewSpeakers" name="confuiEmbeddedViewSpeakers" src="https://a.confui.com/public/conferences/5371dd14904753e2e6000f1a/locations/5371dd15904753e2e6000f1c/speakers?framehost=http%3A%2F%2Fwww.lambdajam.com%2F" style="width:100%;border:none" scrolling="no"></iframe>
-      <script type="text/javascript">
-      //<![CDATA[
-      var postman = new NoJQueryPostMessageMixin('postMessage', 'receiveMessage');
-      postman.receiveMessage(function(e) {
-          var iframe = document.getElementById('confuiEmbeddedViewSpeakers');
-          iframe.height = e.data + 'px';
-          window.scroll(0,0);
-        }
-      );
-      //]]>
-      </script>
+    <div id="hotel">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="huge">Hotel Information</h1>
+        <div class="col-lg-6">
+          <strong>Hotel Location:</strong><br />
+          <a href="http://chicagosouthuniversity.place.hyatt.com/en/hotel/home.html">
+            Hyatt Place Chicago-South/University Medical Center
+          </a>
+          <br />
+          5225 S Harper Ave<br />
+          Chicago, IL 60615<br />
+        </div>
+        <div class="col-lg-6">
+          <strong>Hotel Reservations:</strong><br />
+          Call (800) 233-1234<br />
+          <em>Mention code G-LCAL</em><br />
+          <span>Rate is $209 and includes hot breakfast and internet.</span>
+        </div>
+      </div>
     </div>
   </div>
+
+  <div class="container">
+    <hr />
+    <div id="getting_there" class="row">
+      <h1 class="huge">Getting There</h1>
+      <h2>From the conference hotel:</h2>
+      <p>
+        The hotel is a short walk from a METRA station. South Shore Cultural
+        Center is 5 stops south with the station adjacent to the SSCC.
+        The METRA runs every 26 minutes.
+      </p>
+      <p>
+        The hotel will also have shuttles but they'll be shared with other guests.
+      </p>
+
+      <hr />
+
+      <h2>Public Transportation:</h2>
+      <p>
+        Use the City of Chicago's planner and specify South Shore Cultural
+        Center as the destination.
+      </p>
+
+      <hr />
+
+      <h2>Parking:</h2>
+      <p>
+        South Shore Cultural Center has paid lot for parking should you decide
+        to drive.
+      </p>
+    </div>
+  </div>
+  <hr />
 </div>
 
 
@@ -91,7 +126,7 @@
     
     <script>
       $(function() {
-        $('#speakers_menu').addClass('selected');
+        $('#hotel_menu').addClass('selected');
       });
     </script>
     
