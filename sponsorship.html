@@ -17,6 +17,24 @@ summary: LambdaJam Chicago offers multiple levels of sponsorship. Find out more 
   <div class="container">
     <hr />
     <div class="row">
+      <script type="text/javascript" src="https://a.confui.com/nojquery.ba-postmessage.min.js"></script>
+      <iframe id="confuiEmbeddedViewSponsors"
+              name="confuiEmbeddedViewSponsors"
+              src="https://a.confui.com/public/conferences/5371dd14904753e2e6000f1a/locations/5371dd15904753e2e6000f1c/sponsors?framehost=http%3A%2F%2Fwww.lambdajam.com%2F"
+              style="width:100%;border:none"
+              scrolling="no"></iframe>
+
+    <script type="text/javascript">
+      //<![CDATA[
+        var postman = new NoJQueryPostMessageMixin('postMessage', 'receiveMessage');
+        postman.receiveMessage(function(e) {
+          var iframe = document.getElementById('confuiEmbeddedViewSponsors');
+          iframe.height = e.data + 'px';
+          window.scroll(0,0);
+        });
+      //]]>
+    </script>
+    <div class="row">
       <div class="col-lg-6">
         <h3 class="center">Platinum</h3>
         <h4 class="center">$7000</h4>
